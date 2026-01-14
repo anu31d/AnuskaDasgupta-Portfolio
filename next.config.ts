@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   basePath: '/AnuskaDasgupta-Portfolio',
+  assetPrefix: '/AnuskaDasgupta-Portfolio',
   typescript: {
     ignoreBuildErrors: true,
   },

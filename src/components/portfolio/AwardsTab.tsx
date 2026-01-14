@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trophy } from 'lucide-react';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils';
 
 interface AwardsTabProps {
   linkedinProfileText: string;
@@ -53,7 +54,7 @@ export function AwardsTab({ linkedinProfileText }: AwardsTabProps) {
                             <div className={`group bg-white p-3 rounded-sm shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-accent/30 ${rotations[index % rotations.length]} hover:!rotate-0`}>
                                 <div className="bg-background aspect-w-3 aspect-h-2">
                                     <Image
-                                        src={award.image}
+                                        src={getAssetPath(award.image)}
                                         alt={award.name}
                                         width={600}
                                         height={400}
