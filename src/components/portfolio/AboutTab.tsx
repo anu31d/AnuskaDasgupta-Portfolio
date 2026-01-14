@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Zap, Linkedin, Github, Instagram, Mail, Copy, Check } from 'lucide-react';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils';
 
 interface AboutTabProps {
   linkedinProfileText: string;
@@ -92,7 +93,7 @@ export function AboutTab({ linkedinProfileText }: AboutTabProps) {
         <div className="md:col-span-2 [perspective:800px]">
             <div className="group [transform-style:preserve-3d] animate-float">
                 <Image
-                    src="/images/profile-photo.jpg"
+                    src={getAssetPath("/images/profile-photo.jpg")}
                     alt="Anuska Dasgupta"
                     width={400}
                     height={400}

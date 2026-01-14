@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils';
 
 const galleryItems = [
     { src: '/images/gallery-project-day.jpg', width: 800, height: 600, caption: 'Presenting at Project Day', aiHint: 'project presentation' },
@@ -44,7 +45,7 @@ export function GalleryTab() {
             <div className={`bg-background p-3 pb-12 rounded-sm shadow-lg transform transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-accent/30 ${rotations[index % rotations.length]} hover:!rotate-0 hover:!scale-110 z-0 hover:z-10`}>
                 <div className="bg-white aspect-square">
                     <Image
-                        src={item.src}
+                        src={getAssetPath(item.src)}
                         alt={item.caption}
                         width={item.width}
                         height={item.height}
